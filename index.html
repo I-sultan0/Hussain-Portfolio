@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hussain's Portfolio</title>
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- Navbar starts here -->
+    <nav class="navbar">
+        <div class="brand-name">Hussain</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#fizz">Home</a></li>
+                <li><a href="#gall">Skills</a></li>
+                <li><a href="#main-content">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle-button')[0];
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+        });
+    </script>
+
+
+
+
+    <!-- Body starts here -->
+    <div id="fizz">
+        <div class="photo">
+            <img src="./Hussain.jpg" alt="">
+        </div>
+        <div class="abt">
+            <p>Hi, </p>
+            <p class="typing"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./app.js"></script>
+
+
+    <div id="gall">
+
+
+        <h2>My Skills</h2>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="./images/pexels-anna-shvets-4482900.jpg" style="width:100%">
+                <div class="text">Sales and Purchase Operator</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="./images/pexels-fauxels-3184296.jpg" style="width:100%">
+                <div class="text">Team Management</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="./images/pexels-frans-van-heerden-2881632.jpg" style="width:100%">
+                <div class="text">Import Export Operator</div>
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </div>
+
+
+    <!-- Javascript of the slideshow images section -->
+
+    <!-- Start -->
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+
+    <!---------------------------- End----------------------->
+
+    <!-- Footer starts here -->
+
+    <footer>
+        <div id="main-content">
+            <div class="left box">
+                <h2>About Me</h2>
+                <div class="content">
+                    <p>I am Md. Safdar Hussain, an expert in Financial Sector. Currently residing in Kolkata. <br> I
+                        can also perform as a Sales & Purchase Opertor, Import & Export Operator, Business Developer and
+                        a perfect candidate
+                        for Team Management.
+
+                        It is clear to me that quality is
+                        never the result of chance
+                        but the addition of skills and attitudes. It is only achieved by combining professionalism and
+                        consistency.</p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/mdsafdar.hussain" target="_blank"><span
+                                class="fab fa-facebook-f"></span></a>
+                        <a href="https://www.linkedin.com/login" target="_blank"><span
+                                class="fab fa-linkedin"></span></a>
+                        <a href=" https://www.instagram.com/accounts/login/" target="_blank"><span
+                                class="fab fa-instagram"></span></a>
+                        <a href="https://twitter.com/login" target="_blank"><span class="fab fa-twitter"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text1">Kolkata,India</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text1">+91 98369 19696</span>
+                    </div>
+                    <div class="place">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text1">mdsafdarhussainjbs@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="right box">
+                <h2>Contact Me</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text1">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text1">Message *</div>
+                            <textarea cols="25" rows="2" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="bottom">
+            <center>
+                <span class="credit">Created By <a href="#">Sultan Akhter</a>|</span>
+                <span class="far fa-copyright"><span>2021 All rights reserved.</span></span>
+            </center>
+        </div>
+    </footer>
+</body>
+
+</html>
+</body>
+
+</html>
