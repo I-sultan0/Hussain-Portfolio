@@ -102,6 +102,18 @@ body {
   .navbar-links.active {
     display: flex;
   }
+
+  .photo img {
+    height: 35%;
+  }
+
+  .photo {
+    height: 35%;
+    margin: 0 auto;
+  }
+  .img {
+    height: 50vh;
+  }
 }
 
 /* Body starts here */
@@ -198,31 +210,30 @@ body {
     display: flex;
     flex-direction: column;
     width: 98.5vw;
-    height: 155vh;
+    height: 100vh;
   }
 
   .photo img {
-    height: 65%;
-    width: 75%;
+    height: 55%;
+    width: 65%;
   }
 
   .photo {
-    height: 65%;
-    width: 75%;
-    margin-top: 11%;
-    margin-left: 12.5%;
+    height: 55%;
+    width: 65%;
+    margin: 0 auto;
+    padding-top: 4%;
   }
 
   .abt {
     width: 70%;
-    height: 40%;
-    margin-top: -7%;
-    margin-left: 15%;
+    height: 30%;
+    margin: 0 auto;
   }
   .abt p {
     place-items: center;
     font-weight: bold;
-    margin-top: 10%;
+    /* margin-top: 10%; */
   }
 }
 
